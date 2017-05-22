@@ -1,0 +1,136 @@
+/* -----------------------------
+    Primary style
+--------------------------------*/
+/*
+    Global CSS Code
+--------------------------------*/
+ /*-- Google Font --*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,700');
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus, input:focus, textarea:focus, button:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+a:hover { text-decoration: none }
+
+/* -----------------------------
+    Theme CSS Codes
+--------------------------------*/
+
+.section-padding{
+    padding:80px 0;
+}
+.section-title{
+    text-transform: uppercase;
+    margin-bottom: 90px;
+}
+.product-image-wrap{
+    display: table;
+    background: #f1f1f1;
+    width:100%;
+    height: 320px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    transition: .3s;
+}
+.product-image-wrap-tablecell{
+    display: table-cell;
+    vertical-align: middle;
+}
+.single-product-box h4{
+    font-family: roboto;
+    color: #707070;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.product-price{
+    font-size: 43px;
+    color: #ff5151;
+    font-family: 'oswald', sans-serif;
+    font-weight: 700;
+}
+.single-product-box {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+.single-product-box:after{
+    position: absolute;
+    left: 0;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: url(../img/map.png) no-repeat scroll center top #3b3b3b; background-size: cover;
+    z-index: -1;
+    transition: .3s;
+    opacity: 0;
+}
+.product-hover-links{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width:100%;
+    z-index: 2;
+    text-align: left;
+    padding: 0 20px;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.product-hover-links a{
+    display: inline-block;
+    color: #676767;
+    height: 50px;
+    width: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 44px;
+}
+.product-hover-links a.bordered-link{
+    border: 2px solid #ff5151;
+    width:50px;
+}
+.single-product-box:hover:after{
+    top: -10%;
+    height: 120%;
+    opacity: 1
+}
+.single-product-box:hover .product-image-wrap{
+    background: none;
+}
+.single-product-box:hover .product-hover-links{
+    top:-10px;
+    opacity: 1;
+    visibility: visible;
+}
